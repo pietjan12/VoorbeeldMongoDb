@@ -1,0 +1,20 @@
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+    baseName = "com.kiddybank-data"
+    version = "1.0"
+}
+
+dependencies{
+    compile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
+    runtime('com.microsoft.sqlserver:mssql-jdbc')
+
+    compile project(':Domain')
+}
